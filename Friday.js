@@ -52,5 +52,6 @@ function Days(index) {
   ];
   return days[index];
 }
-
+// add test first than write in typescript and see how many test I can remove because I am using typescript
+// put one app to circleCI and run test automticly in circleCI
 console.log(fridayTheThirteents(1999));
