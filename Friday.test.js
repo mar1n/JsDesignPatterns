@@ -1,6 +1,3 @@
-
-
-
 describe('Friday the thirtTheents', () => {
     test('Is this a friday?', () => { 
         let someYear = '1999';
