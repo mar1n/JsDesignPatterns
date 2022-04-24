@@ -55,4 +55,13 @@ function leaveNumbers(arrStr) {
     });
 }
 
-module.exports = {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers };
+function removeComma(arrComma) {
+    if(arrComma[0] === ",") {
+        arrComma.shift();
+        return arrComma;
+    }
+    return arrComma;
+}
+
+
+module.exports = {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma };
