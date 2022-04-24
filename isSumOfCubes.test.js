@@ -1,6 +1,10 @@
-const {sumOfCubes, findStrOfNumbers, divideByComma } = require("./isSumOfCubes");
+const {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers } = require("./isSumOfCubes");
 
 describe('sum of cubes', () => {
+    test('leave Numbers', () => {
+        let divideArr = ['Q', ',', '2', '9', ',', '4', '5', '[', '&', 'e', 'r', 'u', ',', '9', '0', '2', '6', '3', '1', '5'];
+        expect(leaveNumbers(divideArr)).toEqual([',', '2', '9', ',', '4', '5', ',', '9', '0', '2', '6', '3', '1', '5']);
+    });
     test('divide by comma', () => { 
         let randomStr = 'QK29a45[&erui9026315';
         expect(divideByComma(randomStr)).toEqual(['Q', ',', '2', '9', ',', '4', '5', '[', '&', 'e', 'r', 'u', ',', '9', '0', '2', '6', '3', '1', '5']);

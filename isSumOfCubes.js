@@ -41,4 +41,18 @@ function findStrOfNumbers(randomStr) {
     return arrStr;
 }
 
-module.exports = {sumOfCubes, findStrOfNumbers, divideByComma };
+function leaveNumbers(arrStr) {
+    return arrStr.filter(value => {
+        if(value === ',') {
+            return value;
+        }
+        if(value === "-") {
+            return value;
+        }
+        if(!Number.isNaN(parseInt(value))) {
+            return value;
+        }
+    });
+}
+
+module.exports = {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers };
