@@ -1,6 +1,10 @@
-const {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma } = require("./isSumOfCubes");
+const {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma, toThreeNum } = require("./isSumOfCubes");
 
 describe('sum of cubes', () => {
+    test('join string of numnbers', () => {
+        let arrStr = ['9026315', '153'];
+        expect(toThreeNum(arrStr)).toEqual(['902', '631', '5', '153']);
+    });
     test('remove first comma in array', () => {
         let arrWithCommas = [',', '2', '9', ',', '4', '5', ',', '9', '0', '2', '6', '3', '1', '5'];
         expect(removeComma(arrWithCommas)).toEqual(['2', '9', ',', '4', '5', ',', '9', '0', '2', '6', '3', '1', '5']);

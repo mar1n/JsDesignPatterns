@@ -63,5 +63,32 @@ function removeComma(arrComma) {
     return arrComma;
 }
 
+function toThreeNum(arr) {
+    let newArr = [];
+    for(let x = 0; x < arr.length; x++) {
+        if(arr[x].length > 3) {
+            let p = 3;
+            let n = 3;
+            for(let y = 0; y < Math.ceil(arr[x].length / 3); y++) {
+                if(y === 0) {
+                    newArr.push(arr[x].slice(0, 3));
+                } else if(y === Math.ceil(arr[x].length / 3) - 1) {
+                    //console.log('test', arr[x].slice(n, arr[x].length));
+                    newArr.push(arr[x].slice(n, arr[x].length));
+                } else {
+                    p += 3;
+                    newArr.push(arr[x].slice(n, p))
+                    n += 3;
+                }
+                
+            }
+        } else {
+            newArr.push(arr[x]);
+        }
+        
+    }
+    return newArr;
+}
 
-module.exports = {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma };
+
+module.exports = {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma, toThreeNum };
