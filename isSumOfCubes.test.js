@@ -1,6 +1,10 @@
-const {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma, toThreeNum } = require("./isSumOfCubes");
+const {sumOfCubes, findStrOfNumbers, divideByComma, leaveNumbers, removeComma, toThreeNum, checkCubic } = require("./isSumOfCubes");
 
 describe('sum of cubes', () => {
+    test('check if the value is cubic', () => {
+        let value = '153';
+        expect(checkCubic(value)).toEqual(153); 
+    });
     test('join string of numnbers', () => {
         let arrStr = ['9026315', '153'];
         expect(toThreeNum(arrStr)).toEqual(['902', '631', '5', '153']);
